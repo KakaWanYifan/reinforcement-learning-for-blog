@@ -140,6 +140,10 @@ print(v_pi.reshape(4, 4))
 print('最优策略 =')
 print(np.argmax(policy_pi, axis=1).reshape(4, 4))
 
+# 看看效果
+episode_rewards = [play_policy(env, policy_pi) for _ in range(100)]
+print("平均奖励：{}".format(np.mean(episode_rewards)))
+
 
 def iterate_value(env, gamma=1, tolerant=1e-6, kmax=1000000):
     v = np.zeros(env.unwrapped.nS)  # 初始化
@@ -164,6 +168,3 @@ print('状态价值函数 =')
 print(v_vi.reshape(4, 4))
 print('最优策略 =')
 print(np.argmax(policy_vi, axis=1).reshape(4, 4))
-
-episode_rewards = [play_policy(env, policy_vi) for _ in range(100)]
-print("价值迭代 平均奖励：{}".format(np.mean(episode_rewards)))

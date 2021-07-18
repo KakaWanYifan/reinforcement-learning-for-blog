@@ -1,6 +1,7 @@
 from sympy import symbols
 from sympy import solve
 from sympy import Eq
+from sympy import latex
 
 v_hungry = symbols('v_hungry')
 v_full = symbols('v_full')
@@ -23,3 +24,4 @@ ans = solve([Eq(q_hungry_dont_eat, v_hungry),
 for k, v in ans.items():
     print(k)
     print(v)
+    print(latex(v))

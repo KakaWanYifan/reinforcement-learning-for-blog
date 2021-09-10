@@ -2,4 +2,4 @@
 
 > 强化学习浅谈及其Python实现 | Kaka Wan Yifan
 
-> https://kakawanyifan.com/20200
+> https://kakawanyifan.com/10500
